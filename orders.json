@@ -1,0 +1,52 @@
+[
+  {
+    "orderId": 1,
+    "userId": "Ujjwalgoel800@gmail.com",
+    "items": [
+      {
+        "productId": 2,
+        "name": "Banana",
+        "sku": "BAN-1002",
+        "unit": "kg",
+        "pricePerUnit": 1.5,
+        "currency": "GBP",
+        "quantity": 1,
+        "subtotal": 1.5
+      }
+    ],
+    "totalAmount": 1.5,
+    "currency": "GBP",
+    "status": "placed",
+    "placedAt": "2026-05-12T12:58:03.904Z"
+  },
+  {
+    "orderId": 2,
+    "userId": "Ujjwalgoel800@gmail.com",
+    "items": [
+      {
+        "productId": 8,
+        "name": "Blueberry Pack",
+        "sku": "BLB-1008",
+        "unit": "pack",
+        "pricePerUnit": 4.5,
+        "currency": "GBP",
+        "quantity": 1,
+        "subtotal": 4.5
+      },
+      {
+        "productId": 7,
+        "name": "Kiwi",
+        "sku": "KWI-1007",
+        "unit": "kg",
+        "pricePerUnit": 4,
+        "currency": "GBP",
+        "quantity": 1,
+        "subtotal": 4
+      }
+    ],
+    "totalAmount": 8.5,
+    "currency": "GBP",
+    "status": "placed",
+    "placedAt": "2026-05-12T13:02:32.302Z"
+  }
+]
