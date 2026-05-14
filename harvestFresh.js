@@ -34,7 +34,7 @@ const productSchema = {
   organic: Joi.boolean().default(false),
   origin: Joi.string().required(),
   sku: Joi.string().required(),
-  images: Joi.array().items(Joi.string().uri()).default([]),
+  image: Joi.string().uri().optional(),
 };
 
 function validateProduct(product) {
@@ -136,6 +136,7 @@ function validateOrder(order) {
 // POST /api/orders — push a new purchase to cart history
 app.post("/api/orders", (req, res) => {
   const { error, value } = validateOrder(req.body);
+  console.log("Received order:", req.body);
   if (error)
     return res.status(400).send(`Error: ${error.details[0].message}`);
 
