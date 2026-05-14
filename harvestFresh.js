@@ -156,7 +156,7 @@ app.post("/api/orders", (req, res) => {
       currency: product.currency,
       quantity: item.quantity,
       subtotal: parseFloat((product.price * item.quantity).toFixed(2)),
-      image: product.images,
+      image: product.image,
     });
   }
 
