@@ -122,6 +122,7 @@ const orderSchema = {
       Joi.object({
         productId: Joi.number().integer().positive().required(),
         quantity: Joi.number().integer().positive().required(),
+        image: Joi.string().uri().optional(),
       })
     )
     .min(1)
