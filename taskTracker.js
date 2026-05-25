@@ -1,5 +1,6 @@
 const Joi = require("joi");
 const express = require("express");
+const { randomUUID } = require("crypto");
 const fs = require("fs");
 const path = require("path");
 const app = express();
@@ -21,7 +22,7 @@ function validateTask(task) {
   return Joi.validate(task, taskSchema, { allowUnknown: false });
 }
 function findTask(id) {
-  return tasks.find((t) => t.id === parseInt(id));
+  return tasks.find((t) => String(t.id) === String(id));
 }
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
@@ -43,7 +44,7 @@ app.post("/api/tasks", (req, res) => {
   }
 
   const newTask = {
-    id: UUID(),
+    id: randomUUID(),
     ...req.body,
   };
   tasks.push(newTask);
