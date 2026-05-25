@@ -32,11 +32,6 @@ app.get("/", (req, res) => {
 
 // GET /api/tasks — optional ?status=pending|in progress|completed filter
 app.get("/api/tasks", (req, res) => {
-//   const { status } = req.query;
-//   if (status) {
-//     const filtered = tasks.filter((t) => t.status === status);
-//     return res.send(filtered);
-//   }
   res.send(tasks);
 });
 
@@ -48,7 +43,7 @@ app.post("/api/tasks", (req, res) => {
   }
 
   const newTask = {
-    id: tasks.length + 1,
+    id: UUID(),
     ...req.body,
   };
   tasks.push(newTask);
