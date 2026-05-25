@@ -14,9 +14,7 @@ const tasks = JSON.parse(fs.readFileSync(TASK_FILE, "utf-8"));
 
 const taskSchema = {
   title: Joi.string().min(3).required(),
-  description: Joi.string().min(5).required(),
-  status: Joi.string().valid("pending", "in progress", "completed").default("pending"),
-  dueDate: Joi.date().iso().optional(),
+  isCompleted: Joi.boolean().default(false),
 };
 
 function validateTask(task) {
